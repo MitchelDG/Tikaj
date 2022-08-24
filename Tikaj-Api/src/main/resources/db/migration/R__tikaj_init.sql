@@ -1,0 +1,13 @@
+-- script for establishing database of Tikaj project
+
+CREATE SCHEMA IF NOT EXISTS TIKAJ;
+
+USE TIKAJ;
+
+CREATE TABLE IF NOT EXISTS MATERIAL
+(
+    ID UUID PRIMARY KEY,
+    UNIT_ID UUID,
+    UNIT_PRICE DECFLOAT(2),
+
+)

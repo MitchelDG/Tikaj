@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:bootapp
+    username: sa
+    password:
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /api/v1/
+
