@@ -8,6 +8,8 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.ToString.Exclude;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,8 +38,10 @@ public class Image {
 
   private String description;
 
+  @CreationTimestamp
   private LocalDateTime created;
 
+  @UpdateTimestamp
   private LocalDateTime edited;
 
   @Exclude

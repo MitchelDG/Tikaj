@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.ToString.Exclude;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -38,8 +40,10 @@ public class Product {
 
     private String description;
 
+    @CreationTimestamp
     private LocalDateTime created;
 
+    @UpdateTimestamp
     private LocalDateTime edited;
 
     @OneToMany(fetch = FetchType.LAZY)
